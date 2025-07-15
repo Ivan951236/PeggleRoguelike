@@ -1,0 +1,3 @@
+F:/code/source/repos/inventory_gtkmm/build/CMakeFiles/inventory_gtkmm.dir
+F:/code/source/repos/inventory_gtkmm/build/CMakeFiles/edit_cache.dir
+F:/code/source/repos/inventory_gtkmm/build/CMakeFiles/rebuild_cache.dir

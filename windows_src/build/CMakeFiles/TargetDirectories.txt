@@ -1,0 +1,3 @@
+F:/code/source/repos/inventory_cli/build/CMakeFiles/inventory_cli.dir
+F:/code/source/repos/inventory_cli/build/CMakeFiles/edit_cache.dir
+F:/code/source/repos/inventory_cli/build/CMakeFiles/rebuild_cache.dir
