@@ -2,8 +2,9 @@
 This is a Peggle Roguelike Preset Generator made in C++ and for Android also in Kotlin
 ![The Layout for the roguelike!](https://raw.githubusercontent.com/Ivan951236/PeggleRoguelike/refs/heads/main/gallery/peggle_roguelike_layout.png)
 
-## Compilation Instrucions
-# Windows:
+# Compilation Instrucions
+
+## Windows:
 Install ![MSYS2](https://msys2.org)
 Run MSYS2 UCRT64 Shell (Required!)
 Update MSYS2 by using ``` pacman -Syu ```
@@ -12,7 +13,7 @@ Prepare Build Directory ``` mkdir -p build && cd build ```
 Prepare CMake ``` CMake .. -G "MSYS Makefiles" ```
 Run the following command ``` make ```
 
-# Windows (CLI):
+## Windows (CLI):
 Install ![MSYS2](https://msys2.org)
 Run MSYS2 UCRT64 Shell (Required!)
 Update MSYS2 by using ``` pacman -Syu ```
@@ -21,7 +22,7 @@ Prepare Build Directory ``` mkdir -p build && cd build ```
 Prepare CMake ``` CMake .. -G "MSYS Makefiles" ```
 Run the following command ``` make ```
 
-# Android:
+## Android:
 Install ![Android Studio](https://developer.android.com/studio)
 Launch Android Studio
 Install the Lastest SDK and Buildtools
