@@ -12,6 +12,8 @@ Run MSYS2 UCRT64 Shell (Required!)
 
 Update MSYS2 by using ``` pacman -Syu ```
 
+Install MSYS2 Buildtools for C++
+
 Install all GTK's Requirements on MSYS2 and also ![GTK 3 Runtime (Install gtk3 not gtk2)](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer) for windows to run GTK 3 Applications
 
 Prepare Build Directory ``` mkdir -p build && cd build ```
