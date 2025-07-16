@@ -6,15 +6,15 @@ This is a Peggle Roguelike Preset Generator made in C++ and for Android also in 
 
 ## Windows (and Linux's GUI):
 
-Install ![MSYS2](https://msys2.org)
+Install ![MSYS2](https://msys2.org) (not required for linux, as it is not for linux)
 
-Run MSYS2 UCRT64 Shell (Required!)
+Run MSYS2 UCRT64 Shell (Required!) (on Linux, open your tty emulator (terminal) instead)
 
-Update MSYS2 by using ``` pacman -Syu ```
+Update MSYS2 by using ``` pacman -Syu ``` (command's true for arch linux, might differ on other distro's)
 
-Install MSYS2 Buildtools for C++
+Install MSYS2 Buildtools for C++ (linux buildtools on linux)
 
-Install all GTK's Requirements on MSYS2 and also ![GTK 3 Runtime (Install gtk3 not gtk2)](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer) for windows to run GTK 3 Applications
+Install all GTK's Requirements on MSYS2 (for linux is linux) and also ![GTK 3 Runtime (Install gtk3 not gtk2)](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer) for windows to run GTK 3 Applications
 
 Prepare Build Directory ``` mkdir -p build && cd build ```
 
@@ -24,13 +24,13 @@ Run the following command ``` make ```
 
 ## Windows (CLI) (and Linux's CLI):
 
-Install ![MSYS2](https://msys2.org)
+Install ![MSYS2](https://msys2.org) (not required for linux, as it is not for linux)
 
-Run MSYS2 UCRT64 Shell (Required!)
+Run MSYS2 UCRT64 Shell (Required!) (on Linux, open your tty emulator (terminal) instead)
 
-Update MSYS2 by using ``` pacman -Syu ```
+Update MSYS2 by using ``` pacman -Syu ``` (command's true for arch linux, might differ on other distro's)
 
-Install MSYS2 Buildtools for C++
+Install MSYS2 Buildtools for C++ (linux buildtools on linux)
 
 Prepare Build Directory ``` mkdir -p build && cd build ```
 
