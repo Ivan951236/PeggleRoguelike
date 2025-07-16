@@ -4,7 +4,7 @@ This is a Peggle Roguelike Preset Generator made in C++ and for Android also in 
 
 # Compilation Instrucions
 
-## Windows:
+## Windows (and Linux's GUI):
 
 Install ![MSYS2](https://msys2.org)
 
@@ -22,7 +22,7 @@ Prepare CMake ``` CMake .. -G "MSYS Makefiles" ```
 
 Run the following command ``` make ```
 
-## Windows (CLI):
+## Windows (CLI) (and Linux's CLI):
 
 Install ![MSYS2](https://msys2.org)
 
