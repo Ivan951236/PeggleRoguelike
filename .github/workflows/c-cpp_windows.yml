@@ -32,7 +32,7 @@ jobs:
         run: cd windows_src/build
 
       - name: cmake prepare
-        run: cmake windows_src
+        run: cmake windows_src -G "Unix Makefiles"
         
       - name: Build
         run: make
