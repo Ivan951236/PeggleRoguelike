@@ -1,0 +1,44 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          target: 'desktop'
+          target_arch: 'win64_mingw81'
+          use-official: true
+          email: ${{ secrets.QT_EMAIL }}
+          password: ${{ secrets.QT_PW }}
+          cache: true
+          tools: 'tools_qtcreator,qt.tools.qtcreator'
+
+      - name: Prepare for build
+        run: cd windows_src/build
+
+      - name: cmake prepare
+        run: cmake windows_src
+        
+      - name: Build
+        run: make
+
+      - name: Test
+        run: make check
+
+      - name: Distcheck
+        run: make distcheck
