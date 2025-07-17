@@ -26,16 +26,16 @@ jobs:
           tools: 'tools_qtcreator,qt.tools.qtcreator'
 
       - name: Build (Prepare QMake)
-        run: cd windows_src_gui && mkdir build && qmake Peggle_Roguelike.pro
+        run: cd ${{ github.workspace }}/windows_src_gui && mkdir ${{ github.workspace }}/windows_src_gui/build && qmake ${{ github.workspace }}/windows_src_gui/peggle_roguelike.pro
 
       - name: Prepare for build
-        run: cd windows_src_gui/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug
+        run: cd ${{ github.workspace }}/windows_src_gui/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug
 
       - name: Build
-        run: mingw32-make.exe
+        run: mingw32-make.exe && cd debug
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: windows_build
-          path: inventory_cli.exe
+          name: windows_gui_build
+          path: Peggle_Roguelike.exe
