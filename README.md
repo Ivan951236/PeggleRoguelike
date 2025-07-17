@@ -8,7 +8,7 @@ This is a Peggle Roguelike Preset Generator made in C++ and for Android also in 
 
 Install ![Qt 5]([https://msys2.org](https://www.qt.io/download-qt-installer-oss))
 
-If Present, then run Qt Creator (Required!) (on Linux, open your tty emulator (terminal) instead)
+If Present, then run Qt Creator
 
 Select Project
 
