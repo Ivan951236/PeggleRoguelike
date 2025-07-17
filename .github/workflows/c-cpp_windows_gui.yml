@@ -28,11 +28,8 @@ jobs:
       - name: Build (Prepare QMake)
         run: cd ${{ github.workspace }}/windows_src_gui && mkdir ${{ github.workspace }}/windows_src_gui/build && qmake ${{ github.workspace }}/windows_src_gui/peggle_roguelike.pro
 
-      - name: Prepare for build
-        run: cd ${{ github.workspace }}/windows_src_gui/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug
-
       - name: Build
-        run: mingw32-make.exe && cd debug
+        run: jom
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
