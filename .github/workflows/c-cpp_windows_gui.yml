@@ -29,7 +29,7 @@ jobs:
         run: mkdir windows_src_gui/build && cd windows_src_gui/build
         
       - name: Build
-        run: make
+        run: qmake ../Peggle_Roguelike.pro
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
