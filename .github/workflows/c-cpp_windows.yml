@@ -29,7 +29,7 @@ jobs:
           tools: 'tools_qtcreator,qt.tools.qtcreator'
 
       - name: Prepare for build
-        run: cd windows_src/build
+        run: mkdir windows_src/build && cd windows_src/build
 
       - name: cmake prepare
         run: cmake windows_src -G "Unix Makefiles"
