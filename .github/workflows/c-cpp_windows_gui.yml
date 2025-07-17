@@ -29,7 +29,7 @@ jobs:
         run: cd windows_src_gui && mkdir build && qmake Peggle_Roguelike.pro
 
       - name: Prepare for build
-        run: cd windows_src_gui/build
+        run: cd windows_src_gui/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug
 
       - name: Build
         run: mingw32-make.exe
