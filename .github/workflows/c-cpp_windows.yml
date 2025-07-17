@@ -28,6 +28,12 @@ jobs:
           cache: true
           tools: 'tools_qtcreator,qt.tools.qtcreator'
 
+      - name: Prepare for build
+        run: cd windows_src/build
+
+      - name: cmake prepare
+        run: cmake windows_src
+        
       - name: Build
         run: make
 
