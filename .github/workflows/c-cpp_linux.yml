@@ -21,7 +21,7 @@ jobs:
         with:
           version: '5.15.2'
           target: 'desktop'
-          target_arch: 'win64_mingw81'
+          target_arch: 'gcc_64'
           use-official: true
           email: ${{ secrets.QT_EMAIL }}
           password: ${{ secrets.QT_PW }}
