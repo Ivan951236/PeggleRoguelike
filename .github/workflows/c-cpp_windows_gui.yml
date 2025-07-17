@@ -28,9 +28,6 @@ jobs:
       - name: Build (Prepare QMake)
         run: cd ${{ github.workspace }}/windows_src_gui && mkdir ${{ github.workspace }}/windows_src_gui/build && qmake ${{ github.workspace }}/windows_src_gui/peggle_roguelike.pro -spec win32-g++ "CONFIG+=qtquickcompiler" && mingw32-make.exe qmake_all
 
-      - name: Build
-        run: jom
-
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
