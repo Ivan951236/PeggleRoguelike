@@ -26,10 +26,10 @@ jobs:
           tools: 'tools_qtcreator,qt.tools.qtcreator'
 
       - name: Build (Prepare QMake)
-        run: qmake Peggle_Roguelike.pro
+        run: cd windows_src_gui && mkdir build && qmake Peggle_Roguelike.pro
 
       - name: Prepare for build
-        run: mkdir windows_src_gui/build && cd windows_src_gui/build
+        run: cd windows_src_gui/build
 
       - name: Build
         run: mingw32-make.exe
