@@ -17,7 +17,7 @@ jobs:
         # Option 1: using 'latest' branch, the most recent CMake and ninja are installed.
     - uses: lukka/get-cmake@latest  # <--= Just this one-liner suffices.
     - name: Install Qt
-      uses: jurplel/install-qt-action@v4
+    - uses: jurplel/install-qt-action@v4
       with:
         version: '5.15.2'
         target: 'desktop'
