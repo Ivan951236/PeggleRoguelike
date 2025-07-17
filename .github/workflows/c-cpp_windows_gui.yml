@@ -18,18 +18,18 @@ jobs:
         with:
           version: '5.15.2'
           target: 'desktop'
-          target_arch: 'win64_mingw81'
+          arch: 'win64_mingw81'
           use-official: true
           email: ${{ secrets.QT_EMAIL }}
-          password: ${{ secrets.QT_PW }}
+          pw: ${{ secrets.QT_PW }}
           cache: true
           tools: 'tools_qtcreator,qt.tools.qtcreator'
 
+      - name: Build (Prepare QMake)
+        run: qmake Peggle_Roguelike.pro
+
       - name: Prepare for build
         run: mkdir windows_src_gui/build && cd windows_src_gui/build
-        
-      - name: Build (Prepare QMake)
-        run: qmake ../Peggle_Roguelike.pro
 
       - name: Build
         run: mingw32-make.exe
