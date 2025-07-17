@@ -8,28 +8,31 @@ on:
 
 jobs:
   build:
-
     runs-on: windows-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Install CMake
-        # Option 1: using 'latest' branch, the most recent CMake and ninja are installed.
-    - uses: lukka/get-cmake@latest  # <--= Just this one-liner suffices.
-    - name: Install Qt
-    - uses: jurplel/install-qt-action@v4
-      with:
-        version: '5.15.2'
-        target: 'desktop'
-        arch: 'win64_mingw81'
-        use-official: true
-        email: ${{ secrets.QT_EMAIL }}
-        pw: ${{ secrets.QT_PW }}
-        cache: true
-        tools: 'tools_qtcreator,qt.tools.qtcreator'
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          target: 'desktop'
+          target_arch: 'win64_mingw81'
+          use-official: true
+          email: ${{ secrets.QT_EMAIL }}
+          password: ${{ secrets.QT_PW }}
+          cache: true
+          tools: 'tools_qtcreator,qt.tools.qtcreator'
+
+      - name: Build
+        run: make
+
+      - name: Test
+        run: make check
+
+      - name: Distcheck
+        run: make distcheck
