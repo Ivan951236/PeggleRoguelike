@@ -13,9 +13,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install CMake
-        uses: lukka/get-cmake@latest
-
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -30,9 +27,6 @@ jobs:
 
       - name: Prepare for build
         run: mkdir windows_src_gui/build && cd windows_src_gui/build
-
-      - name: cmake prepare
-        run: cmake windows_src_gui -G "Unix Makefiles"
         
       - name: Build
         run: make
