@@ -13,8 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: make-dir
-      run: mkdir windows_src/build && cd windows_src/build
+    - name: build
+      run: cd windows_src/build
     - name: cmake
       run: cmake .. -G "Unix Makefiles"
     - name: make
