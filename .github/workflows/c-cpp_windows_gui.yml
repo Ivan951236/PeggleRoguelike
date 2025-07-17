@@ -1,4 +1,4 @@
-name: Windows Programmer
+name: Windows Graphics Programmer
 
 on:
   push:
@@ -16,11 +16,23 @@ jobs:
       - name: Install CMake
         uses: lukka/get-cmake@latest
 
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          target: 'desktop'
+          target_arch: 'win64_mingw81'
+          use-official: true
+          email: ${{ secrets.QT_EMAIL }}
+          password: ${{ secrets.QT_PW }}
+          cache: true
+          tools: 'tools_qtcreator,qt.tools.qtcreator'
+
       - name: Prepare for build
-        run: mkdir windows_src/build && cd windows_src/build
+        run: mkdir windows_src_gui/build && cd windows_src_gui/build
 
       - name: cmake prepare
-        run: cmake windows_src -G "Unix Makefiles"
+        run: cmake windows_src_gui -G "Unix Makefiles"
         
       - name: Build
         run: make
