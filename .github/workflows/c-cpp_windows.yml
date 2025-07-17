@@ -41,4 +41,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows_build
-          path: windows_src/build/inventory_cli.exe
+          path: windows_src/build/
