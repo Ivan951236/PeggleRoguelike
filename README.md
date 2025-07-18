@@ -6,6 +6,8 @@ This is a Peggle Roguelike Preset Generator made in C++ and for Android also in 
 
 ## Windows (and Linux's GUI):
 
+NOTE: The GUI Version is now in Ivan951236/PeggleRoguelikeGUI repository!
+
 Install ![Qt 5]([https://msys2.org](https://www.qt.io/download-qt-installer-oss))
 
 If Present, then run Qt Creator
