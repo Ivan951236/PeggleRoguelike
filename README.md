@@ -1,6 +1,4 @@
 # PeggleRoguelike
-NOTE: if you came from Ivan's Installer's Update URL, then it mean you either compile the newer version or download one at ![Ivan's itch.io page](https://ivan951236.itch.io/prpg-ivans-origin)
-This is a Peggle Roguelike Preset Generator made in C++ and for Android also in Kotlin
 ![The Layout for the roguelike!](https://raw.githubusercontent.com/Ivan951236/PeggleRoguelike/refs/heads/main/gallery/peggle_roguelike_layout.png)
 
 # Compilation Instrucions
